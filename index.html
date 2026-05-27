@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to run a job application as an ABM campaign — a worked example, by Gary Meyer</title>
+<meta name="description" content="A case study in applying ABM principles to a job application. The Geotab Senior Manager, Demand Generation role is the worked example. Every move, every asset, every psychological principle in play — annotated.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Gary Meyer">
+
+<meta property="og:title" content="How to run a job application as an ABM campaign — a worked example">
+<meta property="og:description" content="Eleven psychological principles, five assets, one Senior Manager seat. The campaign isn't being sent. The method is.">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+<style>
+  :root {
+    --ink: #0e0e0d;
+    --ink-2: #1a1a18;
+    --ink-3: #2a2926;
+    --cream: #f3ede0;
+    --cream-2: #ebe3d2;
+    --cream-soft: #e2d9c4;
+    --rust: #c84520;
+    --rust-soft: #e06b3f;
+    --gold: #d4a157;
+    --gold-soft: #e8c486;
+    --paper: #faf6ec;
+    --rule: #45413c;
+    --rule-light: #d8cfb8;
+    --muted: #8a857a;
+    --serif: "Iowan Old Style", "Charter", "New York", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+    --mono: "SF Mono", "JetBrains Mono", "Menlo", monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: var(--rust-soft); text-decoration: underline; text-decoration-color: rgba(224, 107, 63, 0.4); text-underline-offset: 4px; transition: all 0.15s; }
+  a:hover { color: var(--gold-soft); text-decoration-color: var(--gold-soft); }
+
+  /* =========================================================
+     SECTION SHELL — full bleed background, padded inner
+     ========================================================= */
+  section { padding: 12vh 24px; }
+  section > .inner { max-width: 920px; margin: 0 auto; }
+
+  .pad-narrow > .inner { max-width: 700px; }
+  .pad-wide > .inner { max-width: 1100px; }
+
+  /* =========================================================
+     INVERSE — cream sections
+     ========================================================= */
+  .inverse { background: var(--paper); color: var(--ink); }
+  .inverse a { color: var(--rust); text-decoration-color: rgba(200, 69, 32, 0.3); }
+  .inverse a:hover { color: var(--ink); text-decoration-color: var(--ink); }
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+  .hero {
+    padding: 18vh 24px 14vh;
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(212, 161, 87, 0.08), transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(200, 69, 32, 0.06), transparent 55%),
+      var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero .meta-top {
+    font-family: var(--sans);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    margin-bottom: 8vh;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+  }
+  .hero .meta-top .pill {
+    color: var(--rust-soft);
+    border: 1px solid var(--rust-soft);
+    padding: 4px 12px;
+    border-radius: 100px;
+    text-transform: none;
+    letter-spacing: 0.04em;
+    font-size: 11px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 7.5vw, 88px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    max-width: 14ch;
+    color: var(--cream);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .hero h1 .strike {
+    text-decoration: line-through;
+    text-decoration-color: var(--rust);
+    text-decoration-thickness: 4px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  .hero .sub {
+    margin-top: 36px;
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.5vw, 28px);
+    line-height: 1.4;
+    max-width: 32ch;
+    color: var(--cream-2);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .hero .byline {
+    margin-top: 8vh;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .hero .byline a { color: var(--cream-2); text-decoration-color: var(--rule); }
+  .hero .byline .sep { color: var(--rule); margin: 0 12px; }
+
+  /* =========================================================
+     CHAPTER NUMBERS
+     ========================================================= */
+  .chapter {
+    font-family: var(--sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--rust-soft);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .inverse .chapter { color: var(--rust); }
+
+  /* =========================================================
+     HEADINGS
+     ========================================================= */
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+    font-weight: 600;
+    margin-bottom: 36px;
+    max-width: 22ch;
+  }
+  h3 {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.8vw, 30px);
+    line-height: 1.25;
+    font-weight: 600;
+    margin: 48px 0 16px 0;
+    letter-spacing: -0.005em;
+  }
+  h4 {
+    font-family: var(--sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    color: var(--gold);
+    margin: 32px 0 10px 0;
+  }
+  .inverse h4 { color: var(--rust); }
+
+  /* =========================================================
+     BODY
+     ========================================================= */
+  p { margin-bottom: 20px; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.65; }
+  p strong { font-weight: 600; color: var(--cream); }
+  .inverse p strong { color: var(--ink); }
+  em { font-style: italic; }
+  code { font-family: var(--mono); font-size: 0.88em; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 3px; }
+  .inverse code { background: rgba(0,0,0,0.06); }
+
+  ul, ol { margin: 20px 0 24px 24px; }
+  li { margin-bottom: 12px; font-size: clamp(16px, 1.3vw, 18px); line-height: 1.6; }
+
+  blockquote {
+    border-left: 3px solid var(--gold);
+    padding: 12px 0 12px 24px;
+    margin: 32px 0;
+    font-style: italic;
+    color: var(--cream-2);
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .inverse blockquote { color: var(--ink-2); border-left-color: var(--rust); }
+
+  /* =========================================================
+     LEDE / DROPCAP
+     ========================================================= */
+  .lede {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2vw, 24px);
+    line-height: 1.5;
+    color: var(--cream);
+    margin-bottom: 36px;
+  }
+  .inverse .lede { color: var(--ink); }
+  .lede::first-letter {
+    font-size: 72px;
+    line-height: 0.9;
+    float: left;
+    margin: 6px 12px -2px 0;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  /* =========================================================
+     PULL QUOTE
+     ========================================================= */
+  .pullquote {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--gold);
+    font-style: italic;
+    text-align: center;
+    margin: 8vh auto;
+    max-width: 22ch;
+    font-weight: 500;
+  }
+  .inverse .pullquote { color: var(--rust); }
+
+  /* =========================================================
+     CARDS — generic small block
+     ========================================================= */
+  .card {
+    background: var(--ink-2);
+    border: 1px solid var(--rule);
+    padding: 28px 28px 22px;
+    border-radius: 6px;
+    margin: 20px 0;
+  }
+  .inverse .card { background: var(--cream-2); border-color: var(--rule-light); }
+  .card h4 { margin-top: 0; }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  /* =========================================================
+     PRINCIPLE — annotated callout
+     ========================================================= */
+  .principle {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .inverse .principle { border-top-color: var(--rule-light); }
+  .principle:last-child { border-bottom: 1px solid var(--rule); }
+  .inverse .principle:last-child { border-bottom-color: var(--rule-light); }
+  .principle .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--rust-soft);
+    font-weight: 400;
+  }
+  .inverse .principle .num { color: var(--rust); }
+  .principle h4 { margin-top: 0; margin-bottom: 4px; color: var(--cream); font-family: var(--serif); font-size: 18px; text-transform: none; letter-spacing: 0; font-weight: 600; }
+  .inverse .principle h4 { color: var(--ink); }
+  .principle .src {
+    font-family: var(--sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .principle p { font-size: 16px; line-height: 1.55; }
+  .principle p:last-child { margin-bottom: 0; }
+
+  /* =========================================================
+     TIMELINE
+     ========================================================= */
+  .timeline { margin: 32px 0; border-left: 2px solid var(--rust); padding-left: 32px; }
+  .inverse .timeline { border-left-color: var(--rust); }
+  .timeline .step {
+    position: relative;
+    margin-bottom: 36px;
+    padding-left: 12px;
+  }
+  .timeline .step::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: var(--rust);
+    border-radius: 50%;
+    border: 3px solid var(--ink);
+  }
+  .inverse .timeline .step::before { border-color: var(--paper); }
+  .timeline .day {
+    font-family: var(--sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .inverse .timeline .day { color: var(--rust); }
+  .timeline h4 {
+    font-family: var(--serif);
+    font-size: 22px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--cream);
+    margin: 4px 0 8px 0;
+    font-weight: 600;
+  }
+  .inverse .timeline h4 { color: var(--ink); }
+
+  /* =========================================================
+     TARGET PROFILE
+     ========================================================= */
+  .target {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 32px 0;
+    border-top: 1px solid var(--rule-light);
+  }
+  .target:first-of-type { border-top: none; }
+  .target .hd { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .target .rank {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--rust);
+    padding: 2px 10px;
+    border: 1px solid var(--rust);
+    border-radius: 100px;
+  }
+  .target .name {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .target .role {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .target .hook { font-style: italic; color: var(--ink-2); font-size: 17px; }
+  .target h4 { margin: 14px 0 4px; }
+  .target .hook-detail { font-size: 16px; }
+
+  /* =========================================================
+     FOOTER / INDEX
+     ========================================================= */
+  .artifact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .artifact {
+    border: 1px solid var(--rule);
+    padding: 18px 20px;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+  .inverse .artifact { border-color: var(--rule-light); background: var(--cream-2); }
+  .artifact:hover { border-color: var(--rust); transform: translateY(-2px); }
+  .artifact .kind {
+    font-family: var(--sans);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .inverse .artifact .kind { color: var(--rust); }
+  .artifact .path {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .artifact .desc {
+    font-family: var(--serif);
+    font-size: 17px;
+    margin-top: 8px;
+    line-height: 1.4;
+    color: var(--cream);
+  }
+  .inverse .artifact .desc { color: var(--ink); }
+
+  /* =========================================================
+     STAT
+     ========================================================= */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin: 36px 0;
+  }
+  .stat { border-top: 2px solid var(--gold); padding-top: 14px; }
+  .inverse .stat { border-top-color: var(--rust); }
+  .stat .big {
+    font-family: var(--serif);
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .inverse .stat .big { color: var(--ink); }
+  .stat .lbl {
+    font-family: var(--sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  /* =========================================================
+     CAPS / MISC
+     ========================================================= */
+  .caps {
+    font-family: var(--sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .inverse .caps { color: var(--rust); }
+
+  hr.thin {
+    border: none;
+    height: 1px;
+    background: var(--rule);
+    margin: 6vh 0;
+  }
+  .inverse hr.thin { background: var(--rule-light); }
+
+  /* =========================================================
+     MOBILE
+     ========================================================= */
+  @media (max-width: 720px) {
+    section { padding: 8vh 20px; }
+    .hero { padding: 12vh 20px 8vh; }
+    .principle { grid-template-columns: 1fr; gap: 8px; }
+    .principle .num { font-size: 28px; }
+    .hero .meta-top { flex-direction: column; gap: 12px; align-items: flex-start; }
+    .target .name { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero pad-wide">
+<div class="inner">
+
+  <div class="meta-top">
+    <span>Case study · May 2026 · ~15-minute read</span>
+    <span class="pill">A worked example — not a sent campaign</span>
+  </div>
+
+  <h1>How to run a job application as an <em>ABM campaign</em>: <span class="strike">submit your resume</span> a worked example.</h1>
+
+  <p class="sub">One Senior Manager seat at Geotab. Three named targets. Five assets. Eleven psychological principles stacked deliberately. The campaign exists as a designed artifact, not a sent one. The method is what's on offer here.</p>
+
+  <p class="byline">By <a href="https://www.linkedin.com/in/garymeyerza/">Gary Meyer</a><span class="sep">·</span>Co-Founder, <a href="https://attentionstrategy.com">Attention Strategy</a><span class="sep">·</span>Toronto<span class="sep">·</span>Worked example: <a href="https://job-boards.greenhouse.io/geotab/jobs/5204803008">Sr Manager, Demand Generation @ Geotab</a></p>
+
+</div>
+</section>
+
+<!-- =========================================================
+     CHAPTER 1 — THE PREMISE
+     ========================================================= -->
+<section class="pad-narrow">
+<div class="inner">
+
+  <div class="chapter">Chapter 01 · The premise</div>
+  <h2>The standard move is the wrong move.</h2>
+
+  <p class="lede">Geotab posted a Sr Manager, Demand Generation role. The job description says the team is transitioning from <em>"activity-based marketing to outcome-driven demand generation."</em> They told us, in writing, what they think is broken.</p>
+
+  <p>The standard application loop — Greenhouse submission, three-week silence, recruiter screen, panel interview, take-home — is the activity-based path. It optimizes for HR throughput. It does not select for the candidate most able to do the work.</p>
+
+  <p>Inverted, the application <em>becomes</em> the campaign. Instead of applying <em>for</em> the role, you run the role's first 90 days externally, before the interview ever happens. The application is the campaign. The campaign is the proof.</p>
+
+  <blockquote>The role's mandate is "stop running activity-based marketing." So the way to apply for it can't be an activity-based application process.</blockquote>
+
+  <p>What follows is the worked example: an ABM campaign of one, with <em>me</em> as the offer and the Geotab marketing org as the named-account list. The <a href="/audit">audit is real and linked</a>. The targets are real and publicly identifiable. The outreach sequence, the timing, the contingencies, the psychological mechanics — all designed, written, and committed as artifacts. The campaign was not executed; the emails were never sent. <strong>This page is the demonstration. The method is the deliverable.</strong></p>
+
+  <p>The same architecture works against any specific role at any company. The Geotab specifics make it concrete; the structure beneath is what travels.</p>
+
+</div>
+</section>
+
+<!-- =========================================================
+     CHAPTER 2 — THE FIVE MOVES
+     ========================================================= -->
+<section class="inverse">
+<div class="inner">
+
+  <div class="chapter">Chapter 02 · The play, in five moves</div>
+  <h2>Five assets. Six business days. One offer.</h2>
+
+  <p>The campaign has five components — each one does specific work and links to the next. None of them is the application; together, they are.</p>
+
+  <div class="timeline">
+
+    <div class="step">
+      <div class="day">Move 01</div>
+      <h4>Discover the surface — and the people</h4>
+      <p>Two parallel research workstreams. <strong>Footprint audit</strong>: map Geotab's public marketing — homepage CTAs, blog cadence, content gates, paid presence (or absence of it), Connect 2026 + Connect EU, MarTech inferred from job descriptions, competitor positioning vs Samsara. <strong>Org map</strong>: identify the actual marketing leaders by name, with verified LinkedIns, recent public activity (articles, talks, posts), and the email pattern (`firstlast@geotab.com`, 68% confidence per RocketReach).</p>
+    </div>
+
+    <div class="step">
+      <div class="day">Move 02</div>
+      <h4>Build the asset — the audit itself</h4>
+      <p>A 2,500-word teardown: <strong>five evidence-backed gaps a buyer sees from outside Geotab today</strong>, ranked by pipeline leverage, with the campaigns I'd ship to close each. It names the conversion paths that leak (the demo form, the 404'd customer hub), the category language Samsara is owning, the three product launches that shipped in 90 days with no demand-gen wrap, the diagnostic tools missing, the orchestration layer the team hasn't built. Then a 30/60/90 plan that names what gets done when. <a href="/audit">→ Read the full audit</a></p>
+    </div>
+
+    <div class="step">
+      <div class="day">Move 03</div>
+      <h4>Build the conversion point — this site</h4>
+      <p>Static microsite hosting the audit ungated, mobile-first, ~50KB, NYT-op-ed serif aesthetic. Plausible analytics so we know which targets read it and how far. The page <em>is</em> the proof-of-craft — if the demand-gen seat ships landing pages, the candidate's own landing page should land.</p>
+    </div>
+
+    <div class="step">
+      <div class="day">Move 04</div>
+      <h4>Pick the targets — three humans, ranked</h4>
+      <p>Skip the ATS. Skip HR. Skip the recruiter screen. Go directly to three marketing leaders whose interests intersect with the audit's findings: <strong>Roula Vrsic</strong> (SVP Marketing — publishing on AI-orchestrated growth and stopping vanity metrics), <strong>Charlie Elliott</strong> (SVP Marketing & Marketplace, ex-Shopify — marketplace + category lens), <strong>Carrie Lepage</strong> (VP Channel Marketing & Revenue Development, CRN 2026 Women of the Channel — channel + revenue lens). Each gets a custom opener tied to their specific work. The hiring manager (AVP Growth & Demand Gen) is not publicly identifiable; the play is to be routed in by Roula or Charlie.</p>
+    </div>
+
+    <div class="step">
+      <div class="day">Move 05</div>
+      <h4>Run the sequence — 3-touch outbound</h4>
+      <p>Touch 1: email to all three on the same Tuesday or Wednesday morning, 7:00–7:45 ET. Touch 2: LinkedIn connect, 3–4 days later. Touch 3 (Roula only): bump email at +8 days, with a specific disagreement-invitation that asks her to push back on the audit's sequencing argument. Each touch has a defined job: <strong>email triggers</strong>, <strong>LinkedIn keeps the door open</strong>, <strong>bump invites the conversation</strong>. The CTA throughout is not a calendar link. It's a 30-minute working session, framed as "I'll walk you through the first campaign I'd ship" — not as an interview.</p>
+    </div>
+
+  </div>
+
+  <p class="caps">→ Every artifact below this fold, in the artifacts index, with file paths.</p>
+
+</div>
+</section>
+
+<!-- =========================================================
+     CHAPTER 3 — THE TARGETS
+     ========================================================= -->
+<section class="inverse">
+<div class="inner">
+
+  <div class="chapter">Chapter 03 · The targets</div>
+  <h2>Three people. Each gets a different angle on the same audit.</h2>
+
+  <p>The targets aren't ranked by seniority. They're ranked by the surface area between the audit's findings and their own publicly stated interests. Roula leads the rank because she has been publishing — for three straight months — about exactly the question Attention Theory answers.</p>
+
+  <div class="target">
+    <div class="hd">
+      <span class="rank">Rank 1</span>
+      <span class="name">Roula Vrsic</span>
+      <span class="role">SVP Marketing</span>
+    </div>
+    <div class="hook">The hook: she's been writing the audit's thesis in public.</div>
+    <h4>What makes her right</h4>
+    <p class="hook-detail">Three LinkedIn articles, January–March 2026: <em>"The Rise of the AI-Orchestrated Marketing Growth Model,"</em> <em>"AI Brand Narratives,"</em> <em>"Stop Measuring AI by Vanity Metrics."</em> She is publicly wrestling with the question of how growth measurement changes when AI restructures the funnel — which is exactly the question Attention Theory's framework was built to answer. The first email opens by citing her January piece by name. The bump email invites her to disagree with the audit's sequencing.</p>
+    <h4>The risk</h4>
+    <p class="hook-detail">Equilar lists her as "former" SVP; LinkedIn shows recent Geotab activity through March 2026. Status is unresolved. The pre-flight checklist requires Gary to confirm her LinkedIn header before sending.</p>
+  </div>
+
+  <div class="target">
+    <div class="hd">
+      <span class="rank">Rank 2</span>
+      <span class="name">Charlie Elliott</span>
+      <span class="role">SVP Marketing & Marketplace</span>
+    </div>
+    <div class="hook">The hook: Shopify-trained, runs both Marketing and the Marketplace.</div>
+    <h4>What makes him right</h4>
+    <p class="hook-detail">Ex-Shopify (Logistics Director, Product Management; before that Pricing & Partnerships, International Product). He thinks in platforms, ecosystems, and marketplace economics. The audit's category-claim argument and its critique of the underused Marketplace as a demand-gen surface land hardest with someone who has built marketplace pricing power before. He sits at the top of the marketing org chart — this Sr Manager role ultimately rolls up to him. Email opens with two specific findings he'll instinctively recognize.</p>
+  </div>
+
+  <div class="target">
+    <div class="hd">
+      <span class="rank">Rank 3</span>
+      <span class="name">Carrie Lepage</span>
+      <span class="role">VP Channel Marketing & Revenue Development</span>
+    </div>
+    <div class="hook">The hook: she owns revenue development. The Sr Manager Demand Gen feeds her pipeline.</div>
+    <h4>What makes her right</h4>
+    <p class="hook-detail">Just named to <strong>CRN 2026 Women of the Channel</strong>. Just back from Geotab Connect EU in Barcelona, where Geotab announced 1M EMEA subscriptions. Kellogg Exec Ed in Digital Strategy/AI. The email leads with a real congratulations on the CRN nod, then pivots to the audit's channel-first framing — the gap that channel marketers consistently report (channel as afterthought, not as primary distribution surface). A Sr Manager Demand Gen who thinks channel-first from day one is the candidate she would champion.</p>
+  </div>
+
+  <h4 style="margin-top: 48px;">The B-list (not in send-1)</h4>
+  <p><strong>Caitlin Sachs</strong> (AVP Product Marketing, ex-Wayfair/PTC) and <strong>Andrew Lavrov</strong> (AVP Marketing Operations) are kept in reserve. If Roula, Charlie, and Carrie all pass, they're touch-1 in a second wave with adjusted angles. We don't burn the bench in send-1.</p>
+
+</div>
+</section>
+
+<!-- =========================================================
+     PULL QUOTE
+     ========================================================= -->
+<section style="padding: 4vh 24px;">
+<div class="inner">
+  <p class="pullquote">"The work is the application. The audit is the cover letter. The reply is the interview."</p>
+</div>
+</section>
+
+<!-- =========================================================
+     CHAPTER 4 — THE PSYCHOLOGY
+     ========================================================= -->
+<section>
+<div class="inner">
+
+  <div class="chapter">Chapter 04 · The marketing psychology in play</div>
+  <h2>Eleven principles. One campaign.</h2>
+
+  <p>Cold outbound to executives has a typical reply rate of 1–3%. This campaign expects ~50%+ on three targets, because every micro-decision was stacked against a specific cognitive lever. The mechanics are below — labelled, sourced, and mapped to the asset they govern.</p>
+
+  <hr class="thin">
+
+  <div class="principle">
+    <div class="num">01</div>
+    <div>
+      <div class="src">Attention Theory · Gary Meyer · theoryofattention.com</div>
+      <h4>Trigger / Tune / Transfix</h4>
+      <p>The three gates every stimulus must clear. <strong>Trigger</strong> (~300ms) is the pattern interrupt — for the email it's the subject line <em>"Re: stop measuring AI by vanity metrics"</em>, for the audit it's the word <em>"unsolicited"</em> in the headline. <strong>Tune</strong> (~90s) is sustained engagement — the audit's evidence-led specificity (six fields, eighteen CTAs, 404'd customer hub) keeps a skeptical reader reading. <strong>Transfix</strong> is the action — a 30-minute working session, not a calendar link, not an interview request. Most demand-gen overweights Trigger (paid impressions) and underweights Transfix (the moment of action). This campaign deliberately inverts the ratio.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">02</div>
+    <div>
+      <div class="src">Reciprocity · Cialdini, Influence (1984)</div>
+      <h4>Give before you ask</h4>
+      <p>The audit is a gift. It contains real, specific, usable strategic value to Geotab whether or not they hire Gary. That asymmetry creates a soft obligation to engage — not because the recipient is being manipulated, but because the natural response to receiving something genuinely useful is to give something back. The CTA leverages this gently: <em>"You'll leave with a campaign brief you could hand to your current team this week regardless of whether you hire me."</em> The reciprocity is real, not extracted.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">03</div>
+    <div>
+      <div class="src">Commitment & consistency · Cialdini, Influence (1984)</div>
+      <h4>Reading is committing</h4>
+      <p>An executive who reads the audit's first 800 words has implicitly committed to engaging with the work. Not replying then feels inconsistent with having invested the time. The audit is structured so the most strategically interesting gaps (#1, #2) appear in the first third — by the time a reader hits #3, they've already decided the work is serious. The reply rate compounds against the read-depth.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">04</div>
+    <div>
+      <div class="src">Authority · Cialdini, Influence (1984)</div>
+      <h4>Earn the right to be heard</h4>
+      <p>Authority is the difference between a stranger's audit and a credible operator's. The audit's About section drops four hard numbers (90% CPL reduction at TATA, $100K→20%-over turnaround, $1M+ saved on a global non-profit, $6M South African Tourism win) inside a single paragraph — no padding, no résumé prose. The numbers are doing the load-bearing work; the Co-Founder credential at Attention Strategy and the FH Highroad / Omnicom history close the trust gap. Authority is established once and never repeated.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">05</div>
+    <div>
+      <div class="src">Liking · Cialdini, Influence (1984)</div>
+      <h4>Specificity over flattery</h4>
+      <p>Liking — the propensity to respond to people who notice us — is most often gamed badly through generic flattery. The campaign uses the opposite move: <strong>specific, particular recognition</strong> of what each target has done in public. Roula gets her vanity-metrics article by name. Carrie gets the CRN nod and the EMEA 1M milestone — both real and recent. Charlie gets the Shopify lineage referenced not as flattery but as <em>method</em> — the audit's marketplace argument is built around how he would already think. The detail signals research effort; the absence of generic praise signals respect.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">06</div>
+    <div>
+      <div class="src">Costly signaling · Spence, Job Market Signaling (1973)</div>
+      <h4>The audit itself is the signal</h4>
+      <p>A weak candidate cannot build a credible 90-day demand-gen audit on a category leader, ranked by leverage, with named campaigns and a measurement architecture, in a week. The artifact is a signal of capability precisely because it is expensive to produce. Filling out the Greenhouse form is cheap; that's why it filters poorly. The audit is the inverse — it costs the producer 5–10 hours of focused, expert work that a weak candidate cannot fake. The signal is in the cost.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">07</div>
+    <div>
+      <div class="src">Specificity bias · Kahneman, Thinking Fast & Slow (2011) — vividness heuristic</div>
+      <h4>Particulars beat abstractions</h4>
+      <p>A specific number is more credible than a general claim. <em>"Six fields on page 1, eighteen CTAs below the fold, 21 industry pages, three product launches in 90 days"</em> is more believable than <em>"the funnel is too complex."</em> The audit is written to feel like reportage, not argument — every gap is anchored to an artifact a reader can verify in 30 seconds. The vividness sells the diagnosis; the diagnosis sells the operator.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">08</div>
+    <div>
+      <div class="src">Loss aversion · Kahneman & Tversky, Prospect Theory (1979)</div>
+      <h4>Frame around what's being lost, not what could be gained</h4>
+      <p>Gap #2 — <em>"Samsara is defining your category. You can take it back."</em> — is loss-framed deliberately. People weight losses ~2x as heavily as equivalent gains. Telling Geotab they could "be more compelling" produces a polite nod; telling them Samsara is actively eating their category language produces an internal urgency. The audit reframes most of its gaps as territory being lost, not opportunity foregone.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">09</div>
+    <div>
+      <div class="src">Pre-suasion · Cialdini (2016)</div>
+      <h4>Set the question before answering it</h4>
+      <p>The audit's opening section — <em>"What you already know"</em> — names the three product launches with no demand-gen wrap before naming any solution. By the time the reader reaches the five gaps, the question <em>"why isn't there a campaign around Geotab Ace yet?"</em> has been planted. The fix doesn't have to argue for its own relevance — the relevance was established before the fix appeared. Cialdini calls this "channeling attention" — focus the reader's mind on the problem before introducing the answer.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">10</div>
+    <div>
+      <div class="src">StoryBrand · Donald Miller (2017)</div>
+      <h4>Geotab is the hero, not Gary</h4>
+      <p>The audit's voice keeps Geotab as the subject of every sentence. <em>"You ship more product than you market." "Your moat is more durable than Samsara's." "Three product launches in 90 days, zero integrated demand-gen wrap."</em> Gary is the guide — the framework underneath, the operator who's done the activity-to-outcomes turn before — but the protagonist is always the company. This inverts the resume's usual structural error (candidate-as-hero) and aligns the document with how Geotab's leadership will naturally read it.</p>
+    </div>
+  </div>
+
+  <div class="principle">
+    <div class="num">11</div>
+    <div>
+      <div class="src">SDR cadence theory · Trish Bertuzzi, The Sales Development Playbook (2016)</div>
+      <h4>Three touches, three channels, three different jobs</h4>
+      <p>The send sequence is borrowed from B2B SDR cadence design — but reversed in intent. Touch 1 (email) does the trigger work; Touch 2 (LinkedIn) does the recognition work — "I'm a real person you can verify"; Touch 3 (bump email, Roula only) does the disagreement-invitation work. Each touch has a different job and a different channel. The campaign does not "follow up" — it sequences. The discipline is to send three touches and stop. Pushing four is what burns the relationship.</p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- =========================================================
+     CHAPTER 5 — METRICS
+     ========================================================= -->
+<section class="inverse">
+<div class="inner">
+
+  <div class="chapter">Chapter 05 · What success looks like</div>
+  <h2>The metrics — and the disqualifying ones.</h2>
+
+  <p>A demand-gen campaign without a scorecard is the activity-based marketing Geotab is trying to leave behind. Three named metrics, two of which are reply-based and one of which is read-based.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="big">≥1</div>
+      <div class="lbl">Working session booked</div>
+    </div>
+    <div class="stat">
+      <div class="big">≥2</div>
+      <div class="lbl">Substantive replies (3 targets)</div>
+    </div>
+    <div class="stat">
+      <div class="big">≥40%</div>
+      <div class="lbl">Audit read-completion (Plausible scroll depth)</div>
+    </div>
+    <div class="stat">
+      <div class="big">1</div>
+      <div class="lbl">Internal forward to AVP Growth &amp; Demand Gen</div>
+    </div>
+  </div>
+
+  <p>The campaign succeeds if even one working session books with Roula, Charlie, or Carrie. The audit is the conversion event for everyone who doesn't book — it stays in the recipient's mind as the artifact tied to Gary's name. If the role goes to someone else, the audit is the residue that earns the second look in six months when the next seat opens. <strong>The work doesn't expire.</strong></p>
+
+  <h4>What we explicitly do NOT count</h4>
+  <ul>
+    <li><strong>Open rates.</strong> They're noisy, especially with image-blocking and Apple Mail Privacy Protection. We don't optimize against them.</li>
+    <li><strong>Clicks on the audit URL.</strong> Read-completion matters; clicks don't. A target who clicks and bounces in five seconds is worse than one who never clicks but reads it on their phone in a meeting they hated.</li>
+    <li><strong>LinkedIn connection accepts.</strong> Easy to get, weak signal. The connection request is a doorway-opener for Touch 3, not a metric.</li>
+  </ul>
+
+  <p>If the role goes elsewhere, the campaign still produced a body of work that doubles as a portfolio piece and a thought-leadership artifact (this very page). The downside is bounded; the upside is the seat.</p>
+
+</div>
+</section>
+
+<!-- =========================================================
+     CHAPTER 6 — DISCIPLINE
+     ========================================================= -->
+<section>
+<div class="inner">
+
+  <div class="chapter">Chapter 06 · The discipline</div>
+  <h2>What we will not do, and why.</h2>
+
+  <p>The hard part of campaign design is restraint. Most outbound dies of over-touching. These rules are written down explicitly so they're not negotiated with under pressure.</p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <h4>No public post until +10 business days</h4>
+      <p>The audit lives on a private URL until at least 10 business days after Touch 1. Publishing earlier reframes the audit as a stunt — a public play for attention — rather than a personal gift to three specific leaders. Once it's been read by the targets, the public reframe is a thought-leadership piece. Order matters.</p>
+    </div>
+
+    <div class="card">
+      <h4>No calendar link in Touch 1</h4>
+      <p>Sending a Calendly link to a cold SVP makes you the person who emailed them a Calendly link. The CTA is <em>reply</em>, not <em>book</em>. The friction is the feature.</p>
+    </div>
+
+    <div class="card">
+      <h4>No resume attached</h4>
+      <p>The audit is the resume. Adding a PDF resume to the email signals that the operator doesn't trust the audit to do its job. The Greenhouse submission carries the resume — that's the place for it.</p>
+    </div>
+
+    <div class="card">
+      <h4>No four-touch sequence</h4>
+      <p>Three touches and stop. Charlie and Carrie get two touches total. Roula gets three because her hook is the strongest. A fourth touch on any of them burns more capital than it earns.</p>
+    </div>
+
+    <div class="card">
+      <h4>No name-drop without permission</h4>
+      <p>Gary mentioned an inside contact at Geotab. That lever is saved for a specific moment — a warm-intro request <em>after</em> a positive Touch 1 reply, not in the cold opener. Naming an inside contact in a cold email reduces the message to "name-drop" and consumes the contact's social capital for free.</p>
+    </div>
+
+    <div class="card">
+      <h4>No automation</h4>
+      <p>Every email and LinkedIn message is sent personally by Gary, from his own inbox and account. The signal of "real human, hand-typed" is itself part of the offer. Automation would be cheaper and would defeat the purpose.</p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- =========================================================
+     CHAPTER 7 — CONTINGENCY
+     ========================================================= -->
+<section class="inverse">
+<div class="inner">
+
+  <div class="chapter">Chapter 07 · The contingency tree</div>
+  <h2>Every reply has a defined next move.</h2>
+
+  <p>The reply playbook is rehearsed before send-1, not improvised after.</p>
+
+  <h3>If they say yes</h3>
+  <p>Reply within 4 working hours with <strong>three specific 30-minute windows in their time zone</strong>, across the next 5 business days. No Calendly link — three named times in plain text. Confirm the window, send a Google Meet / Zoom link with a one-line agenda. Prep: a tight 12-slide brief (or single Notion page) for the Geotab Ace launch — ABM list logic, two landing pages, diagnostic tool concept, paid air-cover plan, partner kit, scorecard. The working session <em>is</em> the interview, framed as collaboration.</p>
+
+  <h3>If they forward to the AVP Growth &amp; Demand Gen</h3>
+  <p>That is the win. Reply to the original sender with a thank-you. Send a fresh, brief note to the AVP referencing the forward — not the whole audit again. Two sentences of summary + link + ask for 30 minutes. The internal endorsement makes the AVP's read-completion much higher than a cold open would.</p>
+
+  <h3>If they pass politely</h3>
+  <p>One sentence of thanks. Then one specific question: <em>"If this role isn't a fit, who at Geotab should I be talking to about the campaign approach in the audit?"</em> People give referrals they wouldn't give meetings. The downside of asking is zero; the asymmetry favors the ask.</p>
+
+  <h3>If they don't reply</h3>
+  <p>Roula gets the Touch 3 bump email at +8 business days, with a specific disagreement-invitation. Charlie and Carrie don't. Two channels (email + LinkedIn) is enough; pushing a third on an unresponsive executive cold burns the relationship and trains a future "no" into them. The LinkedIn connect is the final move.</p>
+
+  <h3>If all three pass</h3>
+  <p>Wait 10 business days. Publish the audit publicly on LinkedIn with a short post framing it as a thought-leadership piece about applying Attention Theory to job seeking. Activate touch-1 on the B-list (Caitlin Sachs, Andrew Lavrov) with adjusted angles. The work doesn't expire — it ages into a portfolio piece and a category claim.</p>
+
+</div>
+</section>
+
+<!-- =========================================================
+     CHAPTER 8 — THE ARTIFACTS
+     ========================================================= -->
+<section>
+<div class="inner">
+
+  <div class="chapter">Chapter 08 · The artifacts</div>
+  <h2>Every file built for this campaign, with paths.</h2>
+
+  <p>Everything below this fold is committed to the workspace at <code>/home/dev/geotab/</code>. The audit and this strategy page are deployed; the rest are local artifacts that inform the public ones.</p>
+
+  <div class="artifact-grid">
+
+    <a class="artifact" href="/">
+      <div class="kind">Public · this page</div>
+      <div class="desc">Case Study — the strategy, end-to-end</div>
+      <div class="path">site/index.html</div>
+    </a>
+
+    <a class="artifact" href="/audit">
+      <div class="kind">Sample asset · the worked artifact</div>
+      <div class="desc">The Audit — five gaps, 30/60/90 plan, ~2,500 words</div>
+      <div class="path">audit/audit.md → site/audit.html</div>
+    </a>
+
+    <div class="artifact">
+      <div class="kind">Internal · target list</div>
+      <div class="desc">Ranked targets, verified emails, hooks per person</div>
+      <div class="path">targets/leadership.md</div>
+    </div>
+
+    <div class="artifact">
+      <div class="kind">Internal · research</div>
+      <div class="desc">Geotab marketing footprint audit — evidence base</div>
+      <div class="path">research/footprint-audit.md</div>
+    </div>
+
+    <div class="artifact">
+      <div class="kind">Internal · outreach</div>
+      <div class="desc">Roula sequence — 3-touch (email · LinkedIn · bump)</div>
+      <div class="path">outreach/01-roula-vrsic.md</div>
+    </div>
+
+    <div class="artifact">
+      <div class="kind">Internal · outreach</div>
+      <div class="desc">Charlie sequence — 2-touch</div>
+      <div class="path">outreach/02-charlie-elliott.md</div>
+    </div>
+
+    <div class="artifact">
+      <div class="kind">Internal · outreach</div>
+      <div class="desc">Carrie sequence — 2-touch</div>
+      <div class="path">outreach/03-carrie-lepage.md</div>
+    </div>
+
+    <div class="artifact">
+      <div class="kind">Internal · operations</div>
+      <div class="desc">Send order, pre-flight checklist, reply playbook</div>
+      <div class="path">outreach/sequence-overview.md</div>
+    </div>
+
+  </div>
+
+  <hr class="thin">
+
+  <h3>External references</h3>
+  <ul>
+    <li>Job posting: <a href="https://job-boards.greenhouse.io/geotab/jobs/5204803008">Senior Manager, Demand Generation @ Geotab (Oakville, ON)</a></li>
+    <li>Gary: <a href="https://www.linkedin.com/in/garymeyerza/">LinkedIn</a> · <a href="https://attentionstrategy.com">Attention Strategy</a> · <a href="https://theoryofattention.com">Attention Theory</a></li>
+    <li>Geotab leadership (research): <a href="https://www.geotab.com/about/leadership/">geotab.com/about/leadership</a></li>
+  </ul>
+
+</div>
+</section>
+
+<!-- =========================================================
+     CLOSER
+     ========================================================= -->
+<section class="hero" style="padding: 14vh 24px 12vh;">
+<div class="inner">
+
+  <div class="chapter">Chapter 09 · Closing note</div>
+  <h2 style="max-width: 22ch; color: var(--cream);">If this works, it's because we did the role's job before they hired anyone to do it.</h2>
+
+  <p style="color: var(--cream-2); margin-top: 24px; max-width: 60ch;">The point of the campaign is not the campaign. The point is that the application process for a demand-gen leader should itself look like a demand-gen campaign — researched, sequenced, measured, disciplined, designed for a real conversion. The candidate who can do that fluently is the candidate Geotab is looking for. Everything else is paperwork.</p>
+
+  <p style="color: var(--cream-2); margin-top: 24px; max-width: 60ch;">Whether the role lands or not, the artifact ages well. It's a portfolio piece, a thought-leadership essay, and a worked example of Attention Theory applied to a high-stakes one-to-three outbound. The work doesn't expire.</p>
+
+  <p class="byline" style="margin-top: 8vh;">— Gary Meyer · Toronto · May 2026 · <a href="https://attentionstrategy.com">Attention Strategy</a></p>
+
+</div>
+</section>
+
+</body>
+</html>

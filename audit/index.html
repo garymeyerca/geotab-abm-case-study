@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>An Unsolicited Demand-Gen Audit for Geotab — Gary Meyer</title>
+<meta name="description" content="Five gaps a buyer sees from outside Geotab — and the first 90 days I'd spend closing them. By Gary Meyer, Co-Founder of Attention Strategy.">
+<meta name="author" content="Gary Meyer">
+
+<!-- Open Graph / social -->
+<meta property="og:title" content="An Unsolicited Demand-Gen Audit for Geotab">
+<meta property="og:description" content="Five gaps a buyer sees from outside Geotab. The first 90 days I'd spend closing them.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Plausible analytics — update data-domain after first deploy. Remove if not using. -->
+<script defer data-domain="REPLACE_WITH_VERCEL_DOMAIN" src="https://plausible.io/js/script.js"></script>
+
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+<style>
+  :root {
+    --bg: #faf8f3;
+    --bg-soft: #f3efe5;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faint: #888;
+    --rule: #d8d2c4;
+    --accent: #8a2a0c;
+    --accent-soft: #b54a25;
+    --serif: "Iowan Old Style", "Charter", "New York", "Apple Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "SF Mono", "JetBrains Mono", "Menlo", "Consolas", monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  article {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 6vh 24px 12vh;
+  }
+
+  /* ------------ Top meta ------------ */
+  .topbar {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 12px;
+    margin-bottom: 6vh;
+    text-transform: uppercase;
+  }
+  .topbar a { color: var(--ink-soft); text-decoration: none; }
+  .topbar a:hover { color: var(--accent); }
+
+  /* ------------ Title block ------------ */
+  .title {
+    font-family: var(--serif);
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+    margin: 0 0 24px 0;
+    color: var(--ink);
+  }
+  .subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    margin: 0 0 36px 0;
+    font-weight: 400;
+  }
+  .byline {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-faint);
+    margin-bottom: 8vh;
+  }
+  .byline a { color: var(--ink-soft); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+  .byline a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  .byline .sep { color: var(--rule); margin: 0 8px; }
+
+  /* ------------ Section headers ------------ */
+  h2 {
+    font-family: var(--serif);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    color: var(--ink-faint);
+    margin: 6vh 0 24px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    margin: 4vh 0 20px 0;
+  }
+
+  h3 .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    margin-right: 14px;
+  }
+
+  h4 {
+    font-family: var(--sans);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--ink-faint);
+    margin: 28px 0 8px 0;
+  }
+
+  /* ------------ Body ------------ */
+  p {
+    margin: 0 0 20px 0;
+  }
+
+  p strong { font-weight: 600; color: var(--ink); }
+  p em { font-style: italic; }
+
+  a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(138,42,12,0.3); text-underline-offset: 3px; transition: color 0.15s; }
+  a:hover { color: var(--accent-soft); text-decoration-color: var(--accent-soft); }
+
+  ul, ol {
+    padding-left: 20px;
+    margin: 0 0 24px 0;
+  }
+  li {
+    margin-bottom: 12px;
+    padding-left: 4px;
+  }
+
+  blockquote {
+    border-left: 2px solid var(--accent);
+    margin: 24px 0;
+    padding: 4px 0 4px 20px;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+
+  /* ------------ Pull-out callouts ------------ */
+  .lede {
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0 0 32px 0;
+  }
+  .lede::first-letter {
+    font-size: 56px;
+    line-height: 0.95;
+    float: left;
+    margin: 4px 8px -4px 0;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .premise {
+    background: var(--bg-soft);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 24px 28px;
+    margin: 36px 0;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .premise p:last-child { margin-bottom: 0; }
+  .premise strong { color: var(--ink); }
+
+  /* ------------ The Ask ------------ */
+  .ask {
+    margin: 8vh 0 0 0;
+    padding: 36px 28px;
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+  }
+  .ask h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; color: var(--ink); }
+  .ask p:last-child { margin-bottom: 0; }
+  .ask .sig {
+    font-family: var(--serif);
+    font-style: italic;
+    margin-top: 16px;
+    color: var(--ink-soft);
+  }
+  .contact {
+    font-family: var(--sans);
+    font-size: 14px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--rule);
+  }
+  .contact a {
+    display: inline-block;
+    margin-right: 16px;
+  }
+
+  /* ------------ Method note ------------ */
+  .method {
+    background: var(--bg-soft);
+    padding: 32px;
+    margin: 6vh 0;
+    border-radius: 4px;
+  }
+  .method h2 { margin-top: 0; }
+  .ttt {
+    font-family: var(--sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  /* ------------ Phase plan ------------ */
+  .phase {
+    font-family: var(--sans);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 32px 0 12px 0;
+  }
+
+  /* ------------ Mobile ------------ */
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    article { padding: 4vh 20px 8vh; }
+    .title { font-size: 32px; }
+    .subtitle { font-size: 18px; }
+    h3 { font-size: 24px; }
+    .lede { font-size: 19px; }
+    .lede::first-letter { font-size: 44px; }
+    .ask, .method { padding: 24px 20px; }
+    .premise { padding: 20px; }
+  }
+
+  /* ------------ Print ------------ */
+  @media print {
+    body { background: white; font-size: 12pt; }
+    article { padding: 1cm; max-width: none; }
+    a { color: var(--ink); text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: var(--ink-faint); }
+    .ask { border: 1pt solid var(--ink); }
+    .topbar, script { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<article>
+
+<div class="topbar">
+  <span>An audit by an applicant</span>
+  <span><a href="#the-ask">→ The ask</a></span>
+</div>
+
+<h1 class="title">An Unsolicited Demand-Gen Audit for Geotab</h1>
+<p class="subtitle">Five gaps a buyer sees from outside — and the first 90 days I'd spend closing them.</p>
+<p class="byline">By <a href="https://www.linkedin.com/in/garymeyerza/">Gary Meyer</a><span class="sep">·</span>May 2026<span class="sep">·</span>10-minute read<span class="sep">·</span>Re: Sr Manager, Demand Generation</p>
+
+<h2>Why this exists</h2>
+
+<p class="lede">Geotab is hiring an AVP, Brand &amp; Growth Marketing. An AVP, Marketing Operations. A Senior Manager, Demand Generation. Segment Campaign Managers. All open at once. The job posting names the transformation explicitly: <em>"activity-based marketing to outcome-driven demand generation."</em></p>
+
+<p>That's the rarest thing in a job description: an honest premise. The team isn't being optimized. It's being rebuilt.</p>
+
+<p>I'm writing this because the standard move — submit through Greenhouse, wait three weeks, hope a recruiter calls — is the wrong way to apply for a role whose entire mandate is <em>stop running activity-based marketing</em>. If I want this seat, I should do the work first. So I did.</p>
+
+<p>Below is what a careful buyer, or a careful hiring manager, sees in Geotab's funnel from outside the firewall today. Five gaps, ranked by leverage. Then the 90 days I'd spend closing them. No resume attached, no calendar link in line one. The work is the application.</p>
+
+<h2>What you already know</h2>
+
+<p>You ship more product than you market. In the last 90 days alone: <strong>Next-Gen GO</strong> and <strong>GO Plus</strong> launched at Connect 2026. <strong>Geotab Build</strong> entered early access in March. <strong>Geotab Ace</strong> is in beta on the homepage hero. <strong>GO Anywhere</strong> dropped at Connect Europe in May, alongside the 1M EMEA subscriptions milestone.</p>
+
+<p>That is a real product engine. But search for any of those names outside the press-release halo and the integrated demand-gen campaign isn't there. No paid air-cover. No dedicated launch landing page beyond the press release. No diagnostic tool. No partner co-marketing kit visible in the wild. No attribution scorecard the field could quote.</p>
+
+<p>This is the <em>exact</em> gap the role exists to close. The audit below works that gap from the bottom of the funnel up.</p>
+
+<h2>The five gaps</h2>
+
+<h3><span class="num">1.</span>The conversion path leaks before traffic gets a chance to convert</h3>
+
+<h4>What's happening</h4>
+<p>The homepage hero — <em>"One platform for optimal fleet performance"</em> — is category language, not a wedge. Above the fold: two CTAs. Below the fold: <strong>eighteen more</strong>, across six product pillars, an analyst report, a competitor comparison page, a newsletter, and a Geotab Ace beta. The demo form (<code>/request-demo/</code>) is six fields on page one of two — name, email, title, phone, <em>"How did you hear about us?"</em> — with no in-line qualifying for fleet size, role, or urgency, and no visible response SLA.</p>
+
+<p>There is <strong>no pricing page</strong> (<code>/pricing/</code> returns 404). <strong>No self-serve trial.</strong> And — this is the part that's hard to explain — the customer-story index pages (<code>/customers/</code>, <code>/case-studies/</code>, <code>/customer-stories/</code>) <strong>all 404</strong>. Stories exist; they're scattered across blog posts and industry pages. There is no browsable, filterable, ROI-numerified library to send a prospect to. Sales is asking for the asset every week.</p>
+
+<h4>What a buyer experiences</h4>
+<p>A 5-truck pizza shop and a 5,000-vehicle utility hit the same form and the same queue. Neither knows what comes next. The only conversion verb on the site is <em>talk to sales</em> — which is the right verb for the enterprise deal and the wrong verb for the 80% of the funnel above it.</p>
+
+<h4>The fix (90-day scope)</h4>
+<ul>
+  <li><strong>Demo form, rebuilt.</strong> Progressive profiling. Branch on fleet size and role within the form. Route enterprise (&gt;250 vehicles) to AE-direct, SMB (&lt;25) to an automated tool path, mid-market to inside sales with a 4-hour SLA. The CRM lift is trivial; the conversion lift is not.</li>
+  <li><strong>Customer story hub, restored.</strong> A single <code>/customers/</code> index with industry, fleet-size, and outcome filters. Eight cards on launch, each with a hard number in the title (<em>"How SBB AG cut idle time 22%"</em>). Every blog post and industry page links into it. This is the single most-asked-for asset in field sales at every B2B I've worked with — for Geotab it's currently a 404.</li>
+  <li><strong>Conversational layer on the 21 industry pages.</strong> Qualified or Drift, scoped narrowly: greet known accounts, capture intent on unknowns, route directly to calendars. Don't deploy site-wide — start on the four industry pages with the highest paid spend backing them and prove conversion lift before scaling.</li>
+</ul>
+<p><strong>Lift, conservatively.</strong> A 15% improvement in demo-to-SQL rate combined with one rebuilt customer hub is, at Geotab's traffic levels, low-eight-figures of incremental pipeline annually. The unsexy 90-day project beats every campaign tactic on this list.</p>
+
+<h3><span class="num">2.</span>Samsara is defining your category. You can take it back.</h3>
+
+<h4>What's happening</h4>
+<p>Geotab self-describes as <em>"the world's #1 commercial telematics provider"</em>: 50,000 customers, 6M connected vehicles, 25 years old, FedRAMP-authorized, an open ecosystem of 430+ marketplace apps and 37+ OEM integrations. All true. All features.</p>
+
+<p>Samsara self-describes as <em>"AI Pioneer of Connected Operations."</em> That is a noun-phrase category, not a feature list. <em>"AI Pioneer."</em> <em>"Connected Operations."</em> They are using it everywhere — paid, organic, analyst briefings, investor decks — and the market is starting to use it back. Their attack page against Geotab leads with <strong>AI accuracy</strong> ("95% inattentive driving detection"), <strong>all-in-one platform vs third-party products</strong>, <strong>in-house support vs "third-party resellers,"</strong> and a <strong>99.99% uptime guarantee.</strong> They are picking the fight on a battlefield they named.</p>
+
+<p>Geotab's response page (<code>/geotab-vs-competitors/</code>) is a defensive Q&amp;A — <em>"the hard questions vendors don't want you to ask"</em> — with no side-by-side table and no counter-category. The truth is that Geotab's moat is real and <em>more durable</em> than Samsara's: open ecosystem, verified data fidelity (CurveLogic), FedRAMP authorization, OEM-deep integrations. Those are the predicates of a different category than "AI for fleets." They're the predicates of <strong>Verified Fleet Intelligence</strong>, or some adjacent claim built around <em>data you can act on, in the platform you already work in, with no walled garden.</em></p>
+
+<h4>What a buyer experiences</h4>
+<p>When a fleet director Googles <em>"AI fleet management"</em> and reads Samsara's hero, then Googles <em>"open telematics platform"</em> and reads Geotab's, they conclude Samsara is the future and Geotab is the present. Both impressions are wrong, but the second one costs Geotab the renewal expansion and the new-logo competitive deal. Category language gets priced into deal cycles three quarters later — there is no campaign that catches up to a positioning gap.</p>
+
+<h4>The fix (90-day scope)</h4>
+<ul>
+  <li><strong>Choose a category claim and write it down.</strong> Workshop a single noun-phrase category — <em>Verified Fleet Intelligence</em>, <em>Open Connected Operations</em>, <em>Trusted Fleet Data Platform</em> — and stop using <em>"telematics provider"</em> in any first-party copy. The exact phrase matters less than picking one and committing.</li>
+  <li><strong>Build the comparison Samsara won't.</strong> A real, evidence-led side-by-side: data accuracy methodology, FedRAMP scope, marketplace depth, OEM coverage, customer-controlled data. Replace the defensive Q&amp;A page. Ship it as a downloadable.</li>
+  <li><strong>One investor-grade narrative deck</strong>, reused across analyst briefings, sales kickoff, the AVP Brand &amp; Growth's onboarding, and the partner channel. Same words everywhere for two quarters.</li>
+</ul>
+<p>This is the slowest gap to close and the one that compounds hardest. Start in week one.</p>
+
+<h3><span class="num">3.</span>Three product launches in 90 days, zero integrated demand-gen wrap</h3>
+
+<h4>What's happening</h4>
+<p>Next-Gen GO, Geotab Build, and Geotab Ace each got a press release, a Connect-stage mention, and a homepage tile. None got a dedicated landing page that segments by buyer. None has a paid air-cover plan visible on Google or LinkedIn. None has a partner-channel co-marketing kit findable in the wild. None has a diagnostic tool that lets a buyer self-qualify before booking time.</p>
+
+<p>The product engine is shipping faster than the marketing engine can amplify, and the gap is widening with every quarter.</p>
+
+<h4>What a buyer experiences</h4>
+<p>A construction-fleet ops VP hears about Geotab Build on a webinar. She types it into Google. Top result: a press release. Second result: a blog post. Third result: a competitor's "what is X" content marketing piece. There is no place to <em>experience the product before talking to sales</em> — and her boss said "find me three options by Friday."</p>
+
+<h4>The fix (90-day scope)</h4>
+<p>Treat the Geotab Ace beta as the proof-of-concept campaign and run the playbook end-to-end. Build it once; reuse for Next-Gen GO and Geotab Build the following quarter.</p>
+<ul>
+  <li><strong>Tiered ABM list:</strong> top 200 named accounts whose ICP fits the Ace use case. Built from existing CRM data + 6sense (or Demandbase) intent.</li>
+  <li><strong>Two dedicated landing pages,</strong> one for each major buyer (Fleet Ops Director, Director of IT/Connected Vehicle). Different headlines, same product.</li>
+  <li><strong>Diagnostic tool:</strong> <em>"Where is AI worth deploying in your fleet? — 5-minute readiness scorecard."</em> The tool <em>is</em> the lead magnet. Replaces the PDF.</li>
+  <li><strong>Paid air-cover:</strong> LinkedIn (account-scoped) + Google (commercial intent + competitor terms) + YouTube pre-roll on the top fleet operations and EV transition channels. Budget scoped to the named account list, not a CPM target.</li>
+  <li><strong>Partner kit:</strong> co-brandable one-pager, slide insert, email template for the channel. The marketplace partners are an underused distribution surface.</li>
+  <li><strong>Post-launch scorecard:</strong> named pipeline added, named accounts engaged, cost per influenced opportunity. Quoted weekly to the field. Not a deck of vanity metrics.</li>
+</ul>
+<p>The Ace campaign becomes the <strong>template</strong>. Quarter two: run it for Next-Gen GO. Quarter three: for Geotab Build's GA. By Q4 you have three launches that look and operate alike — and a team that knows the playbook because they shipped it.</p>
+
+<h3><span class="num">4.</span>PDFs gate the funnel; tools open it</h3>
+
+<h4>What's happening</h4>
+<p>Geotab has <strong>one</strong> ROI calculator and an EV Suitability Assessment. That's it. The rest of the gated library at <code>/white-papers/</code> is PDFs — heavy on public sector guides, light on interactive instruments. Samsara has fuel ROI, safety ROI, EV-fleet ROI, and an idle-time benchmark — every one of which doubles as a sales-qualifying tool <em>and</em> generates a piece of personalized content the prospect actually wants.</p>
+
+<p>The math: a PDF gated behind a form converts at ~2% on cold traffic. A diagnostic tool that returns a personalized result converts at 10–25% — and brings real qualifying data with it. Geotab has 25 years of fleet performance data. The tools should be obvious.</p>
+
+<h4>The fix (6-month scope; first one in 90 days)</h4>
+<ol>
+  <li><strong>Fleet TCO Calculator</strong> — input fleet composition, usage, fuel cost, geography; output cost-per-mile baseline and a Geotab-conservative savings range. Powered by anonymized benchmark data. (Q1 build.)</li>
+  <li><strong>EV Fleet Readiness Score</strong> — extend the existing EVSA into a fuller diagnostic: charging infrastructure readiness, vehicle-cycle alignment, incentive eligibility, ROI horizon. Industry-segmented results. (Q2.)</li>
+  <li><strong>Safety Risk Benchmark</strong> — input recent incidents, fleet size, vehicle class; output relative risk score vs anonymized peer benchmark, with intervention recommendations. (Q2.)</li>
+</ol>
+<p>Each tool gates the <em>result delivery</em> (email me the report) but not the <em>experience</em>. Each output ties to a specific product surface. Each is built once and earns inbound for three years.</p>
+
+<h3><span class="num">5.</span>The orchestration layer Geotab needs is mostly already paid for</h3>
+
+<h4>What's happening</h4>
+<p>Geotab has built the segmentation infrastructure — 21 industry-specific landing pages, 13 commercial verticals plus 8 public sector segments. That's a real asset most B2B teams don't have. What's missing is the orchestration layer that <em>uses</em> the segmentation: intent data telling you who's in market, personalization adjusting the page to the visitor, scoring routing leads to the right play.</p>
+
+<p>There's no externally-visible evidence of intent data (6sense, Demandbase, Bombora), reverse-IP personalization (Mutiny), or PQL capture (Qualified, Drift). The segmentation lives, but it doesn't <em>do</em> anything for a known account vs an anonymous one. The same page renders for a federal IP, a Fortune 500 logistics IP, and a freelance journalist.</p>
+
+<h4>The fix (90-day scope)</h4>
+<p>This is the project I'd run in lockstep with the incoming AVP Marketing Operations — the role exists in the org chart precisely so the demand-gen seat doesn't have to architect this alone.</p>
+<ul>
+  <li><strong>Stand up intent data</strong> on the top 500 commercial fleets + the federal/state-DOT account list. 6sense if budget allows, Bombora as a leaner path. Decision in week three; live in week eight.</li>
+  <li><strong>Reverse-IP personalization</strong> on the four highest-volume industry pages first (Transportation &amp; Logistics, Government, Construction, Utilities). Mutiny is the obvious tool but the build matters more than the vendor — one variant per page, hypothesis-tested, <em>measured</em>.</li>
+  <li><strong>Lead scoring rebuilt</strong> to feed the field, not the dashboard. Single rule: a score change that routes to a human action within four hours, or it doesn't go into production.</li>
+</ul>
+<p>When the AVP MarketingOps lands, this stack is the spine they architect on top of. The Sr Manager Demand Gen seat operates the spine. Sequencing matters: hire MarOps first, but don't wait on Demand Gen — the foundations above are decidable now.</p>
+
+<h2>The first 90 days</h2>
+
+<p>If I were sitting in the seat on day one, here's what I'd ship.</p>
+
+<p class="phase">Weeks 1–4 · Diagnose and decide</p>
+<ul>
+  <li>Land in Oakville. Sit with sales for a week before opening the marketing dashboard. The funnel leak in section 1 above is visible from outside; what's invisible is which fix sales will <em>trust</em>. Earn the trust first.</li>
+  <li>Decide on the category claim (section 2). Write the narrative deck. Get the AVP Brand &amp; Growth and Charlie aligned in one room before week four. If we can't agree on the noun phrase, we can't ship the campaigns.</li>
+  <li>Audit the existing Marketo + Salesforce instance with the AVP MarketingOps. Decide what gets fixed vs replaced vs ignored for the quarter.</li>
+  <li>Pick the Geotab Ace beta as Q1's hero campaign. Brief the team. Set the success metric (qualified pipeline added, not MQLs) in writing, signed off before launch.</li>
+</ul>
+
+<p class="phase">Weeks 5–8 · Ship the launch playbook</p>
+<ul>
+  <li>Run the Ace campaign end-to-end (section 3). All five components — ABM list, two LPs, diagnostic tool, paid air-cover, partner kit. Treat it as the template the team will reuse three more times before year-end.</li>
+  <li>In parallel: rebuilt demo form ships (section 1). Customer story hub goes live (section 1). One conversational-layer pilot on two industry pages (section 1).</li>
+  <li>6sense (or Bombora) procurement decision (section 5). Intent layer scoped.</li>
+</ul>
+
+<p class="phase">Weeks 9–12 · Prove the model and scale it</p>
+<ul>
+  <li>Ace campaign reports out: pipeline added, accounts engaged, cost per influenced opportunity. Honest scorecard. What worked, what didn't, what we'll do differently in the Next-Gen GO wrap.</li>
+  <li>Fleet TCO Calculator goes into build (section 4). Q2 launch target.</li>
+  <li>Intent + personalization live on four industry pages (section 5).</li>
+  <li>Demand-gen operating cadence locked in: weekly campaign standup, monthly pipeline review with sales leadership, quarterly hypothesis-vs-result post-mortem published internally. Boring. Necessary. The opposite of activity-based.</li>
+</ul>
+
+<div class="method">
+<h2>A note on method</h2>
+
+<p>There's a framework underneath everything above and it's worth naming briefly because it's mine. I call it <a href="https://theoryofattention.com">Attention Theory</a>: Trigger, Tune, Transfix.</p>
+
+<p><span class="ttt">Trigger</span> earn the first half-second. (The category claim. The pattern-interrupting subject line. The diagnostic tool that promises a personalized result before a PDF promises insights.)</p>
+
+<p><span class="ttt">Tune</span> earn the next ninety seconds. (The customer story library that returns the <em>specific</em> outcome the buyer is looking for. The personalized industry page. The segmented launch LP.)</p>
+
+<p><span class="ttt">Transfix</span> earn the action. (The four-hour SLA. The named pipeline scorecard. The demo form that already knows what the buyer needs before they ask.)</p>
+
+<p style="margin-bottom: 0;">Most demand-gen programs over-invest in <em>triggers</em> (paid impressions) and under-invest in <em>transfix</em> (the moment a buyer is ready to act and the system doesn't catch them). The five fixes above are tilted deliberately toward transfix — because that's where Geotab's leverage is largest right now. I don't lead with the framework when I lead a team. I lead with the <em>outcomes the framework produces.</em> But if you want to know what's underneath the work, that's what's underneath it.</p>
+</div>
+
+<h2>About</h2>
+<p><strong>Gary Meyer</strong> — Co-Founder, <a href="https://attentionstrategy.com">Attention Strategy</a> (Toronto · Ottawa · Rome · Cape Town). Author of <a href="https://theoryofattention.com">Attention Theory</a>. 20+ years across digital marketing, brand strategy, demand generation, paid media, and growth. Prior seats include SVP Audiences/Insights/Analytics at FleishmanHillard Highroad (Omnicom), SVP Digital at Proof Strategies, and Founder &amp; Managing Partner of Condriac — an independent agency I built to 30 staff across three cities and exited in 2019. Toronto-based; Oakville is local.</p>
+
+<p>A few hard numbers from along the way: <strong>reduced cost-per-lead by 90%</strong> for TATA Motors while holding sales targets · <strong>turned a paid media account from $100K in write-offs to consistently 20% over monthly revenue</strong> · <strong>saved $1M+ in ad spend</strong> by hitting a Phase-2 lead-gen target during Phase 1 (award-winning) · <strong>won the $6M South African Tourism account</strong> — largest regional win, +20% branch revenue. I've done the activity-to-outcomes transition before. The pattern is repeatable. What's hard is the political courage to stop counting MQLs in public.</p>
+
+<p><strong>Why an in-house move, now.</strong> Attention Strategy is the consultancy. Geotab is the <em>kind of problem</em> I'd take from advisory to operator any year: a 25-year category leader, the moat real and durable, the messaging out-flanked by a louder challenger, and a marketing org actively being rebuilt across three open AVP seats. After 20 years of pattern recognition across many problems, I want to apply it deeply to one. The work above is what I'd do across the next three years inside the seat. The audit is what I'd do in the first 90 days. I'd like to do them with you, not for you.</p>
+
+<div class="ask" id="the-ask">
+<h2>The ask</h2>
+<p>Not an interview request.</p>
+<p><strong>A 30-minute working session.</strong> I'll walk you through the first campaign I'd ship in week five — full plan, attribution model, paid budget, partner kit, scorecard — using Geotab Ace as the worked example. You'll see how I think and operate under live conditions, and you'll leave with a campaign brief you could hand to your current team this week regardless of whether you hire me.</p>
+<p>The Greenhouse application is in. This document is the cover letter.</p>
+<p class="sig">— Gary</p>
+<p class="contact">
+  <a href="mailto:garymeyerza@gmail.com">garymeyerza@gmail.com</a>
+  <a href="https://www.linkedin.com/in/garymeyerza/">LinkedIn</a>
+  <a href="https://attentionstrategy.com">Attention Strategy</a>
+  <a href="https://theoryofattention.com">Attention Theory</a>
+</p>
+</div>
+
+</article>
+
+</body>
+</html>
